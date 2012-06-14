@@ -1,5 +1,6 @@
-# sucesor para simbolos
 def sucChar(caracter, alfabeto):
+  """Esta funcion devuelve el simbolo sucesor de un caracter
+     en un alfabeto dado."""
   if caracter == alfabeto[-1]:
     return alfabeto[0]
   else:
@@ -10,14 +11,18 @@ def sucChar(caracter, alfabeto):
       if car == caracter:
         devolver = True
 
-# sucesor para cadenas
 def sucStr(cadena, alfabeto):
+  """Esta funcion devuelve la cadena sucesora de una cadena
+     en un alfabeto dado."""
   if cadena[-1] == alfabeto[-1]:
     return (sucStr(cadena[:-1],alfabeto) + sucChar(cadena[-1], alfabeto))
   else:
     return cadena[:-1] + sucChar(cadena[-1], alfabeto)
     
 def main():
+  """En esta funcion podemos comprobar como funcionan los
+     anteriores modulos, consiguiendo codigos instantaneos
+     con las propiedades especificadas."""
   alfabeto = ['0', '1']
   longitudes = [1, 2, 3, 4, 4]
   #alfabeto = ['0', '1']
